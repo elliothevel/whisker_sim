@@ -7,6 +7,7 @@ import numpy as np
 import trep
 from trep.visual import *
 import matplotlib.pyplot as plt
+import matplotlib
 import whisker_sim as ws
 
 # Import the single whisker parameters.
@@ -41,6 +42,7 @@ for a in [0, 10, 20, 30]:
 # Plot the results for each curvature.
 N = 200
 plt.rc('text', usetex=True)
+matplotlib.rcParams.update({'font.size':18})
 fig = plt.figure(facecolor='white',figsize=(12,5))
 ax = plt.axes()
 ax.plot(t[:N], fx[0][:N], t[:N], fx[1][:N], t[:N], fx[2][:N], t[:N], fx[3][:N])
